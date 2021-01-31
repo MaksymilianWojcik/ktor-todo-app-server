@@ -1,0 +1,311 @@
+{
+	"info": {
+		"_postman_id": "36b48730-0861-4aa6-9cdf-3d5732aeef4a",
+		"name": "todos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "me",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBdXRoZW50aWNhdGlvbiIsImF1ZCI6ImNvbS5td2NvZGUudG9kbyIsImlzcyI6Imh0dHBzOi8vand0LXByb3ZpZGVyLWRvbWFpbi8iLCJpZCI6MjIsImlhdCI6MTYxMjA5MzQzMiwidXNlcm5hbWUiOiJ1c2VybmFtZTEwIn0.oZ38g0PyKdCnL3UoGrCxR2YjEfyVJ718tjkFN2iLnC-L81EHmNCKhHl9PcJSpdM2SOTxjRjPdHXdXVDRuzScSw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/me",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"someuser\",\n    \"password\": \"test123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/authentication/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"authentication",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "registerAndLogin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"someuser\",\n    \"password\": \"test123\",\n    \"email\": \"someuser@test.pl\",\n    \"firstName\": \"John\",\n    \"surname\": \"Doe\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/authentication/registerAndLogin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"authentication",
+						"registerAndLogin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getTaskByIdInPath",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBdXRoZW50aWNhdGlvbiIsImF1ZCI6ImNvbS5td2NvZGUudG9kbyIsImlzcyI6Imh0dHBzOi8vand0LXByb3ZpZGVyLWRvbWFpbi8iLCJpZCI6MTAsImlhdCI6MTYxMTkyMzExNCwidXNlcm5hbWUiOiJ1c2VybmFtZTQifQ.O27B-6d1tjpB7lpTJPJt0OtUbtQ3qEmZzdqIGiElTSvQUXQ2Y3Dfp7i-fJn3s141Ftz1pwPyCkXT82BaV-27Cg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/task/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"task",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getTaskByIdInParams",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBdXRoZW50aWNhdGlvbiIsImF1ZCI6ImNvbS5td2NvZGUudG9kbyIsImlzcyI6Imh0dHBzOi8vand0LXByb3ZpZGVyLWRvbWFpbi8iLCJpZCI6MTAsImlhdCI6MTYxMTkyMzExNCwidXNlcm5hbWUiOiJ1c2VybmFtZTQifQ.O27B-6d1tjpB7lpTJPJt0OtUbtQ3qEmZzdqIGiElTSvQUXQ2Y3Dfp7i-fJn3s141Ftz1pwPyCkXT82BaV-27Cg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/task?id=4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"task"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllTasks",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBdXRoZW50aWNhdGlvbiIsImF1ZCI6ImNvbS5td2NvZGUudG9kbyIsImlzcyI6Imh0dHBzOi8vand0LXByb3ZpZGVyLWRvbWFpbi8iLCJpZCI6MTAsImlhdCI6MTYxMTkyMzExNCwidXNlcm5hbWUiOiJ1c2VybmFtZTQifQ.O27B-6d1tjpB7lpTJPJt0OtUbtQ3qEmZzdqIGiElTSvQUXQ2Y3Dfp7i-fJn3s141Ftz1pwPyCkXT82BaV-27Cg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/task",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"task"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllTasksForAccount",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBdXRoZW50aWNhdGlvbiIsImF1ZCI6ImNvbS5td2NvZGUudG9kbyIsImlzcyI6Imh0dHBzOi8vand0LXByb3ZpZGVyLWRvbWFpbi8iLCJpZCI6MTAsImlhdCI6MTYxMTkyMzExNCwidXNlcm5hbWUiOiJ1c2VybmFtZTQifQ.O27B-6d1tjpB7lpTJPJt0OtUbtQ3qEmZzdqIGiElTSvQUXQ2Y3Dfp7i-fJn3s141Ftz1pwPyCkXT82BaV-27Cg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/task?accountId=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"task"
+					],
+					"query": [
+						{
+							"key": "accountId",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createTask",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBdXRoZW50aWNhdGlvbiIsImF1ZCI6ImNvbS5td2NvZGUudG9kbyIsImlzcyI6Imh0dHBzOi8vand0LXByb3ZpZGVyLWRvbWFpbi8iLCJpZCI6MTQsImlhdCI6MTYxMjA5Mjk4OCwidXNlcm5hbWUiOiJ1c2VybmFtZTgifQ.os58V_EYB_uPi3V10IJ8IL9bWsEMHOEoKEdI3RvH3uQS-1XWqW5eaaMhl8Tgp4vicxFLkTuSN_mLtcjglxlRpA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 999,\n    \"name\": \"Task1\",\n    \"description\": \"Some description\",\n    \"isActive\": true,\n    \"ownerId\": 999\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/task",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"task"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBdXRoZW50aWNhdGlvbiIsImF1ZCI6ImNvbS5td2NvZGUudG9kbyIsImlzcyI6Imh0dHBzOi8vand0LXByb3ZpZGVyLWRvbWFpbi8iLCJpZCI6MjIsImlhdCI6MTYxMjA5MzQzMiwidXNlcm5hbWUiOiJ1c2VybmFtZTEwIn0.oZ38g0PyKdCnL3UoGrCxR2YjEfyVJ718tjkFN2iLnC-L81EHmNCKhHl9PcJSpdM2SOTxjRjPdHXdXVDRuzScSw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/authentication/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"authentication",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
