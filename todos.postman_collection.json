@@ -114,7 +114,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/api/v1/task/4",
+					"raw": "http://localhost:8080/api/v1/task/30",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -124,7 +124,84 @@
 						"api",
 						"v1",
 						"task",
-						"4"
+						"30"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteTask",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBdXRoZW50aWNhdGlvbiIsImF1ZCI6ImNvbS5td2NvZGUudG9kbyIsImlzcyI6Imh0dHBzOi8vand0LXByb3ZpZGVyLWRvbWFpbi8iLCJpZCI6MTAsImlhdCI6MTYxMTkyMzExNCwidXNlcm5hbWUiOiJ1c2VybmFtZTQifQ.O27B-6d1tjpB7lpTJPJt0OtUbtQ3qEmZzdqIGiElTSvQUXQ2Y3Dfp7i-fJn3s141Ftz1pwPyCkXT82BaV-27Cg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/task?id=4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"task"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateTask",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBdXRoZW50aWNhdGlvbiIsImF1ZCI6ImNvbS5td2NvZGUudG9kbyIsImlzcyI6Imh0dHBzOi8vand0LXByb3ZpZGVyLWRvbWFpbi8iLCJpZCI6MTAsImlhdCI6MTYxMTkyMzExNCwidXNlcm5hbWUiOiJ1c2VybmFtZTQifQ.O27B-6d1tjpB7lpTJPJt0OtUbtQ3qEmZzdqIGiElTSvQUXQ2Y3Dfp7i-fJn3s141Ftz1pwPyCkXT82BaV-27Cg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"id\": 30,\n        \"name\": \"UpdatedTask\",\n        \"description\": \"UpdatedDescription\",\n        \"isActive\": false,\n        \"ownerId\": 14\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/task",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"task"
 					]
 				}
 			},
@@ -252,7 +329,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"id\": 999,\n    \"name\": \"Task1\",\n    \"description\": \"Some description\",\n    \"isActive\": true,\n    \"ownerId\": 999\n}",
+					"raw": "{\n    \"name\": \"Task1\",\n    \"description\": \"Some description\",\n    \"isActive\": true\n}",
 					"options": {
 						"raw": {
 							"language": "json"
