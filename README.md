@@ -18,3 +18,5 @@
 
 ## Endpoints:
  All endpoints are in `todos.postman_collection.json` file. Simply import it into postman
+ 
+ Or just check it here: [docs](https://documenter.getpostman.com/view/12645030/TW6zFmkf)
